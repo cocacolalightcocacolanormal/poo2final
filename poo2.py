@@ -7,6 +7,9 @@ def lancer_de():
     throw3 = random.randit(1, 6)
     throw4 = random.randit(1, 6)
 
+
+
+
     if throw1 < throw2 and throw1 < throw3 and throw1 < throw4:
         return (throw2 + throw3 + throw4)
 
@@ -19,7 +22,8 @@ def lancer_de():
     elif throw4 < throw2 and throw4 < throw3 and throw4 < throw1:
         return (throw2 + throw3 + throw1)
 
-
+def ptvie():
+    throw5 = random.randit(1, 20)
 class NPC:
     def __init__(self):
         self.force = lancer_de()
@@ -28,7 +32,25 @@ class NPC:
         self.intelligence = lancer_de()
         self.sagesse = lancer_de()
         self.charisme = lancer_de()
+        self.race:str
+        self.nom:str
+        self.profession:str
+        self.vie = ptvie()
 
 
-    def attributs(self/):
-        print('force:', self.force, "agilité:", self.agilite, "constitution:", self.constitution, "intelligence:", self.intelligence, "sagesse:", self.sagesse, "charisme:", self.charisme)
+
+    def attributs(self):
+        print('force:', self.force, "agilité:", self.agilite, "constitution:", self.constitution, "intelligence:", self.intelligence, "sagesse:", self.sagesse, "charisme:", self.charisme, "vie", self.vie)
+
+
+
+
+def dommage():
+    damage = random.randit(1, 6)
+class kobold(NPC):
+    cible = NPC
+    dommagesubit = dommage()
+    
+class hero(NPC):
+    cible2 = NPC
+    dommagesubit2 = dommage()
